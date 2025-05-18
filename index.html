@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbolados (By Alema)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css">
+    
+</head>
+<body>
+    <canvas id="background-canvas"></canvas>
+
+    
+    <button class="mute-btn" aria-label="Silenciar"></button>
+
+
+    <div id="login-container">
+        <h2>Iniciar sesión</h2>
+        
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Contraseña" required>
+            <button type="submit" id="login-continue-btn">Entrar</button>
+        </form>
+
+        <p>¿No tienes cuenta? <button id="show-register-btn" type="button">Regístrate</button></p>
+
+        <div id="login-error" class="form-error"></div>
+    </div>
+
+    <div id="register-container">
+        <h2>Registro</h2>
+        
+        <form id="register-form">
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Contraseña" required>
+            <input type="text" id="register-name" placeholder="Nombre de usuario" required>
+            
+            <div id="register-avatar-options">
+                <img class="avatar-option" src="/src/img/avatars/messi.png" data-avatar="avatars/messi.png" alt="Messi">
+                <img class="avatar-option" src="/src/img/avatars/cr7.png" data-avatar="avatars/ronaldo.png" alt="Ronaldo">
+                <img class="avatar-option" src="/src/img/avatars/einstein.png" data-avatar="avatars/einstein.png" alt="Einstein">
+                <img class="avatar-option" src="/src/img/avatars/gandhi.png" data-avatar="avatars/gandhi.png" alt="Gandhi">
+            </div>
+
+            <button type="submit" id="register-continue-btn">Crear cuenta</button>
+        </form>
+
+        <p>¿Ya tienes cuenta? <button id="show-login-btn" type="button">Inicia sesión</button></p>
+        <div id="register-error" class="form-error"></div>
+    </div>
+
+    <div id="menu-container">
+        <div class="welcome-text">
+            <h1>¡Bienvenid@!</h1>
+        </div>
+        
+        <div class="player-info">
+            <img id="menu-player-avatar" src="" alt="Avatar">
+            
+            <span id="menu-player-name"></span>
+        </div>
+
+        <div class="main-buttons">        
+            <button id="start-btn">Jugar</button>
+
+            <button id="instructions-btn">Instrucciones</button>
+
+            <button id="ranking-btn">Ranking</button>
+        </div>
+
+        <button id="logout-btn" class="logout-btn">Cerrar sesión</button>
+    </div>
+    
+    <div id="game-container">
+        <canvas id="time-canvas" width="600" height="28"></canvas>
+
+        <div id="player-info">
+            <img id="game-player-avatar" src="" alt="Avatar">
+
+            <span id="game-player-name">NombreJugador</span>
+        </div>
+        
+        <div id="question">¿Quién ganó el Mundial de 2010?</div>
+        
+        <button class="answer-button">Alemania</button>
+        <button class="answer-button">Brasil</button>
+        <button class="answer-button">España</button>
+        <button class="answer-button">Argentina</button>
+    </div>
+
+    <div id="ending-container">
+        <h2>¡Juego terminado!</h2>
+
+        <p id="final-score">Preguntas respondidas: </p>        
+        
+        <div class="ending-buttons">
+            <button id="restart-btn">Reiniciar</button>
+        
+            <button id="exit-btn">Salir</button>
+        </div>
+    </div>
+
+    <div id="instructions-container">
+        <h2>Instrucciones</h2>
+
+        <p>Responde el máximo número de preguntas antes de que se acabe el tiempo.</p>
+
+        <button id="back-btn">Volver</button>
+    </div>
+
+    <div id="ranking-container">
+        <h2>Ranking</h2>
+
+        <table id="ranking-table">
+            <tr>
+                <th>Jugador</th>
+                <th>Puntos</th>
+            </tr>
+
+        </table>
+        
+        <button id="back-btn-ranking">Volver</button>
+    </div>
+
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAYPE4cbHey4WctG5X9BiWYTXjpA5gFh1A",
+        authDomain: "futbolados-b55dd.firebaseapp.com",
+        projectId: "futbolados-b55dd",
+        storageBucket: "futbolados-b55dd.firebasestorage.app",
+        messagingSenderId: "316679757078",
+        appId: "1:316679757078:web:e12820b9b20e19834c4437"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+    <script src="/player.js"></script>
+    <script src="/quiz.js"></script>
+    <script type="module" src="/ranking.js"></script>
+    <script src="/main.js"></script>
+    <script type="module" src="/login.js"></script>
+    <script src="/sound.js"></script>  
+
+</body>
+</html>

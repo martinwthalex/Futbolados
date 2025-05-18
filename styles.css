@@ -1,0 +1,855 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('https://images.unsplash.com/photo-1608200184287-5b93809ccfa1?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;    
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+
+/* Estilos para login y registro */
+#login-container, #register-container {
+    display: none;
+    background: #1c1c1cdd;
+    padding: 32px 24px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#login-container.active, #register-container.active {
+    display: block;
+}
+
+#login-container, #register-container {
+    animation: fadeIn 0.3s ease-out;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    transition: box-shadow 0.3s;
+}
+
+#login-container h2, #register-container h2 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#login-form, #register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+}
+
+#login-form input, #register-form input {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s;
+    padding: 12px 16px;
+    font-size: 1.08rem;
+}
+
+#login-form input:focus, #register-form input:focus {
+    background: rgba(255,255,255,0.15);
+    border-color: #1de9b6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(29,233,182,0.18);
+}
+
+#login-form input::placeholder, #register-form input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+#login-continue-btn, #register-continue-btn {
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(29,233,182,0.13);
+}
+
+#login-continue-btn:hover, #register-continue-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(29,233,182,0.22);
+}
+
+@keyframes pulseSubmit {
+    0% { transform: scale(1);}
+    50% { transform: scale(0.96);}
+    100% { transform: scale(1);}
+}
+.pulse-submit {
+    animation: pulseSubmit 0.35s;
+}
+
+#login-container p, #register-container p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    color: #b2dfdb;
+}
+
+/* --- MEJORAS VISUALES REGISTRO (manteniendo avatares y flexbox) --- */
+
+#register-container h2 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+}
+
+#register-form input {
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s;
+    padding: 12px 16px;
+    font-size: 1.08rem;
+}
+
+#register-form input:focus {
+    background: rgba(255,255,255,0.15);
+    border-color: #1de9b6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(29,233,182,0.18);
+}
+
+#register-form input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* Avatares registro: mantiene flexbox y añade mejoras visuales */
+#register-avatar-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0 18px 0;
+    align-items: center;
+}
+
+#register-avatar-options .avatar-option {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s, border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(29,233,182,0.08);
+    background: #232323;
+    object-fit: cover;
+}
+
+#register-avatar-options .avatar-option:hover {
+    transform: scale(1.13);
+    border-color: #1dc4e9;
+    box-shadow: 0 0 0 4px rgba(29,233,182,0.18);
+}
+
+#register-avatar-options .avatar-option.selected {
+    border: 2.5px solid #1de9b6;
+    box-shadow: 0 0 0 4px rgba(29,233,182,0.23);
+    transform: scale(1.18);
+}
+
+/* Botón crear cuenta centrado */
+#register-continue-btn {
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    margin: 0.5rem auto 0 auto;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(29,233,182,0.13);
+    display: block;
+}
+
+#register-continue-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(29,233,182,0.22);
+}
+
+@keyframes pulseSubmit {
+    0% { transform: scale(1);}
+    50% { transform: scale(0.96);}
+    100% { transform: scale(1);}
+}
+.pulse-submit {
+    animation: pulseSubmit 0.35s;
+}
+
+/* Texto y botón "¿Ya tienes cuenta?" alineados a la derecha */
+#register-container p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    color: #b2dfdb;
+}
+
+#show-login-btn {
+    background: none;
+    border: none;
+    color: #1de9b6;
+    font-weight: 500;
+    padding: 0 0 0 8px;
+    margin: 0;
+    transition: all 0.2s;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: flex-end;
+}
+
+#show-login-btn:hover {
+    color: #1dc4e9;
+    text-shadow: 0 0 8px rgba(29,233,182,0.4);
+}
+
+/* Animación para errores y feedback */
+.shake {
+    animation: shakeError 0.4s ease-in-out;
+}
+
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.form-error:not(:empty) {
+    background: rgba(255,23,68,0.1);
+    border-radius: 4px;
+    padding: 8px;
+    animation: fadeIn 0.3s ease;
+    margin-top: 10px;
+}
+
+#show-register-btn, #show-login-btn {
+    background: none;
+    border: none;
+    color: #1de9b6;
+    font-weight: 500;
+    padding: 0 0 0 8px;
+    margin: 0;
+    transition: all 0.2s;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: flex-end;
+}
+
+#show-register-btn:hover, #show-login-btn:hover {
+    color: #1dc4e9;
+    text-shadow: 0 0 8px rgba(29,233,182,0.4);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animación para errores */
+.shake {
+    animation: shakeError 0.4s ease-in-out;
+}
+
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.form-error:not(:empty) {
+    background: rgba(255,23,68,0.1);
+    border-radius: 4px;
+    padding: 8px;
+    animation: fadeIn 0.3s ease;
+    margin-top: 10px;
+}
+
+
+/* Estilos para player info, avatares y nombres*/
+#player-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+#player-avatar,
+#menu-player-avatar,
+#game-player-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+#player-name,
+#menu-player-name,
+#game-player-name {
+    font-size: 1.2rem;
+}
+
+.avatar-option:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Estilos para el ranking */
+#ranking-container {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    border-radius: 15px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    max-width: 440px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    text-align: center;
+    animation: fadeIn 0.4s; /* igual que instrucciones */
+}
+
+#ranking-container h2 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#ranking-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin: 0 auto 24px auto;
+    background: transparent;
+}
+
+#ranking-table th, #ranking-table td {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    background: none;
+    border: none;
+}
+
+#ranking-table tr {
+    background: #232323;
+    border-radius: 8px;
+    transition: background 0.18s, box-shadow 0.18s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpRanking 0.5s forwards;
+}
+
+#ranking-table tr:not(.ranking-current):hover {
+    background: #2a2a2a;
+    box-shadow: 0 2px 8px rgba(29,233,182,0.09);
+    cursor: pointer;
+}
+
+#ranking-table tr.ranking-current {
+    background: linear-gradient(90deg, #1de9b6 0%, #1dc4e9 100%);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 0 2px #1de9b6;
+}
+
+#ranking-table img {
+    vertical-align: middle;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: #222;
+}
+
+.ranking-pos {
+    color: #ffd600;
+    font-size: 0.95em;
+    margin-left: 6px;
+    font-weight: normal;
+}
+
+
+
+
+.welcome-text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.main-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 0; /* elimina doble margen */
+}
+
+.main-buttons button,
+.logout-btn {
+    width: 240px;
+    max-width: 90vw;
+    margin: 18px auto 0 auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: 
+        background 0.3s,
+        box-shadow 0.3s,
+        transform 0.18s;
+    display: block;
+    text-align: center;
+    animation: fadeInUpMenu 0.7s both;
+    font-weight: bold;
+}
+
+.main-buttons button {
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    color: #fff;
+}
+
+.logout-btn {
+    position: static;
+    width: 240px;
+    max-width: 90vw;
+    margin: 18px auto 0 auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff1744, #ff616f);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.18s;
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.main-buttons button:hover,
+.logout-btn:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 12px 24px rgba(29,233,182,0.18);
+    filter: brightness(1.08);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUpMenu {
+    0% { opacity: 0; transform: translateY(30px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Animación fade-in escalonada para los botones del menú */
+.main-buttons button:nth-child(1) { animation-delay: 0.1s; }
+.main-buttons button:nth-child(2) { animation-delay: 0.22s; }
+.main-buttons button:nth-child(3) { animation-delay: 0.34s; }
+.logout-btn { animation-delay: 0.46s; }
+
+
+
+
+#game-container {
+    width: 90%;
+    max-width: 800px;
+    background: #1c1c1cdd;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: auto;
+}
+
+#game-container.fade {
+    animation: fade-question 0.4s;
+}
+
+@keyframes fade-question {
+    0% { opacity: 1; transform: scale(1);}
+    40% { opacity: 0; transform: scale(0.97);}
+    60% { opacity: 0; transform: scale(1.03);}
+    100% { opacity: 1; transform: scale(1);}
+}
+
+#progress-container{
+    width: 100%;
+    height: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00e676, #00c853);
+    transition: width 0.2s ease;
+}
+
+
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.answer-button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #00c853, #64dd17);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease, background 0.2s, border 0.2s;
+}
+
+.answer-button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(45deg, #64dd17, #00c853);
+}
+
+.answer-button.correct {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+    color: #fff;
+    border: 2px solid #00e676;
+}
+
+.answer-button.wrong {
+    background: linear-gradient(45deg, #ff1744, #ff616f);
+    color: #fff;
+    border: 2px solid #ff1744;
+}
+
+#ending-container {
+    display: none;
+}
+
+#time-canvas {
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    background: #222;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+#background-canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background: #111;
+}
+
+
+
+/* Botón cerrar sesión igual que los otros botones del menú */
+.logout-btn {
+    position: static;
+    width: 240px;
+    max-width: 90vw;
+    margin: 18px auto 0 auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ff1744, #ff616f);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.18s;
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(90deg, #ff616f, #ff1744);
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 12px 24px rgba(255,23,68,0.18);
+    filter: brightness(1.08);
+}
+
+.mute-btn {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: #232323cc;
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.mute-btn:hover {
+    background: #444;
+}
+
+.mute-btn.muted::before {
+    content: "🔇";
+}
+
+.mute-btn:not(.muted)::before {
+    content: "🔊";
+}
+
+/* Botón volver igual que los principales */
+#back-btn-ranking {
+    margin: 25px auto 0 auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+}
+
+#back-btn-ranking:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #1dc4e9, #1de9b6);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+}
+
+/*Estilos para el container de instrucciones */
+#instructions-container {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    border-radius: 15px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 36px 32px 32px 32px;
+    text-align: center;
+    animation: fadeIn 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#instructions-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: fadeInDown 0.7s;
+}
+
+#instructions-container p {
+    font-size: 1.18rem;
+    color: #e0f7fa;
+    margin-bottom: 2.2rem;
+    line-height: 1.7;
+    text-align: center;
+    animation: fadeIn 0.7s;
+}
+
+#back-btn {
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: fadeInUp 0.7s;
+}
+
+#back-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #1dc4e9, #1de9b6);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.4);
+}
+
+/* Animación fade-in escalonada para filas del ranking */
+#ranking-table tr {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUpRanking 0.5s forwards;
+}
+
+#ranking-table tr:nth-child(1) { animation-delay: 0.08s; }
+#ranking-table tr:nth-child(2) { animation-delay: 0.16s; }
+#ranking-table tr:nth-child(3) { animation-delay: 0.24s; }
+#ranking-table tr:nth-child(4) { animation-delay: 0.32s; }
+#ranking-table tr:nth-child(5) { animation-delay: 0.40s; }
+#ranking-table tr:nth-child(6) { animation-delay: 0.48s; }
+#ranking-table tr:nth-child(7) { animation-delay: 0.56s; }
+#ranking-table tr:nth-child(8) { animation-delay: 0.64s; }
+#ranking-table tr:nth-child(9) { animation-delay: 0.72s; }
+#ranking-table tr:nth-child(10) { animation-delay: 0.80s; }
+#ranking-table tr:nth-child(11) { animation-delay: 0.88s; }
+
+@keyframes fadeInUpRanking {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Estilos para el ending container */
+#ending-container {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    border-radius: 15px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    max-width: 440px;
+    margin: 40px auto;
+    padding: 38px 32px 32px 32px;
+    text-align: center;
+    animation: fadeIn 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ending-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    animation: fadeInDown 0.7s;
+}
+
+#final-score {
+    font-size: 1.35rem;
+    color: #e0f7fa;
+    margin-bottom: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    animation: fadeIn 0.7s;
+}
+
+.ending-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 0.5rem;
+    width: 100%;
+    animation: fadeInUp 0.7s;
+}
+
+#restart-btn, #exit-btn {
+    background: linear-gradient(45deg, #1de9b6, #1dc4e9);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.18s;
+    min-width: 120px;
+    text-align: center;
+}
+
+#restart-btn:hover, #exit-btn:hover {
+    transform: translateY(-5px) scale(1.04);
+    background: linear-gradient(45deg, #1dc4e9, #1de9b6);
+    box-shadow: 0 12px 24px rgba(29,233,182,0.18);
+    filter: brightness(1.08);
+}
+

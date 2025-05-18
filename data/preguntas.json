@@ -1,0 +1,577 @@
+[
+  {
+    "pregunta": "¿Qué selección ha ganado más Copas del Mundo?",
+    "opciones": ["Italia", "Brasil", "Alemania", "Argentina"],
+    "respuesta": "Brasil"
+  },
+  {
+    "pregunta": "¿Cuál es el estadio más grande de Europa?",
+    "opciones": ["San Siro", "Camp Nou", "Wembley", "Santiago Bernabéu"],
+    "respuesta": "Camp Nou"
+  },
+  {
+    "pregunta": "¿Qué jugador tiene más Balones de Oro?",
+    "opciones": ["Cristiano Ronaldo", "Messi", "Pelé", "Maradona"],
+    "respuesta": "Messi"
+  },
+  {
+    "pregunta": "¿En qué año ganó España su primer Mundial?",
+    "opciones": ["2010", "2006", "2014", "2002"],
+    "respuesta": "2010"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico de la Champions League?",
+    "opciones": ["Cristiano Ronaldo", "Messi", "Benzema", "Lewandowski"],
+    "respuesta": "Cristiano Ronaldo"
+  },
+  {
+    "pregunta": "¿Qué país fue anfitrión del Mundial 1998?",
+    "opciones": ["Francia", "Brasil", "Italia", "Alemania"],
+    "respuesta": "Francia"
+  },
+  {
+    "pregunta": "¿Qué club ha ganado más Ligas de Campeones?",
+    "opciones": ["Real Madrid", "Milan", "Liverpool", "Bayern Múnich"],
+    "respuesta": "Real Madrid"
+  },
+  {
+    "pregunta": "¿Quién marcó el gol de la victoria en la final del Mundial 2014?",
+    "opciones": ["Mario Götze", "Thomas Müller", "Klose", "Schürrle"],
+    "respuesta": "Mario Götze"
+  },
+  {
+    "pregunta": "¿Cuál es el apodo de la selección argentina?",
+    "opciones": ["La Roja", "La Albiceleste", "La Canarinha", "Les Bleus"],
+    "respuesta": "La Albiceleste"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 2004?",
+    "opciones": ["Grecia", "Portugal", "Francia", "Italia"],
+    "respuesta": "Grecia"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Real Madrid?",
+    "opciones": ["Cristiano Ronaldo", "Raúl", "Benzema", "Di Stéfano"],
+    "respuesta": "Cristiano Ronaldo"
+  },
+  {
+    "pregunta": "¿En qué país nació Zlatan Ibrahimovic?",
+    "opciones": ["Suecia", "Bosnia", "Serbia", "Croacia"],
+    "respuesta": "Suecia"
+  },
+  {
+    "pregunta": "¿Qué selección ganó el Mundial 1994?",
+    "opciones": ["Brasil", "Italia", "Alemania", "Argentina"],
+    "respuesta": "Brasil"
+  },
+  {
+    "pregunta": "¿Quién fue el entrenador de España en el Mundial 2010?",
+    "opciones": ["Vicente del Bosque", "Luis Aragonés", "Julen Lopetegui", "Luis Enrique"],
+    "respuesta": "Vicente del Bosque"
+  },
+  {
+    "pregunta": "¿Qué club español tiene más títulos de Liga?",
+    "opciones": ["Real Madrid", "Barcelona", "Atlético de Madrid", "Valencia"],
+    "respuesta": "Real Madrid"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del FC Barcelona?",
+    "opciones": ["Messi", "Suárez", "César", "Eto'o"],
+    "respuesta": "Messi"
+  },
+  {
+    "pregunta": "¿En qué año se fundó el Manchester United?",
+    "opciones": ["1878", "1902", "1899", "1910"],
+    "respuesta": "1878"
+  },
+  {
+    "pregunta": "¿Qué selección ganó el Mundial 2006?",
+    "opciones": ["Italia", "Francia", "Alemania", "Brasil"],
+    "respuesta": "Italia"
+  },
+  {
+    "pregunta": "¿Quién fue el portero titular de España en el Mundial 2010?",
+    "opciones": ["Casillas", "Valdés", "Reina", "De Gea"],
+    "respuesta": "Casillas"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Copa América 2021?",
+    "opciones": ["Argentina", "Brasil", "Uruguay", "Chile"],
+    "respuesta": "Argentina"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico de la Premier League?",
+    "opciones": ["Alan Shearer", "Wayne Rooney", "Sergio Agüero", "Thierry Henry"],
+    "respuesta": "Alan Shearer"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 2012?",
+    "opciones": ["Chelsea", "Bayern Múnich", "Real Madrid", "Barcelona"],
+    "respuesta": "Chelsea"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 2018?",
+    "opciones": ["Harry Kane", "Mbappé", "Griezmann", "Lukaku"],
+    "respuesta": "Harry Kane"
+  },
+  {
+    "pregunta": "¿En qué país nació Luka Modric?",
+    "opciones": ["Croacia", "Serbia", "Bosnia", "Eslovenia"],
+    "respuesta": "Croacia"
+  },
+  {
+    "pregunta": "¿Qué selección ganó el Mundial 1978?",
+    "opciones": ["Argentina", "Países Bajos", "Brasil", "Alemania"],
+    "respuesta": "Argentina"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Atlético de Madrid?",
+    "opciones": ["Luis Aragonés", "Fernando Torres", "Griezmann", "Forlán"],
+    "respuesta": "Luis Aragonés"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 2005?",
+    "opciones": ["Liverpool", "Milan", "Barcelona", "Juventus"],
+    "respuesta": "Liverpool"
+  },
+  {
+    "pregunta": "¿Quién fue el entrenador del Leicester City campeón en 2016?",
+    "opciones": ["Claudio Ranieri", "Brendan Rodgers", "Nigel Pearson", "Craig Shakespeare"],
+    "respuesta": "Claudio Ranieri"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 2016?",
+    "opciones": ["Portugal", "Francia", "Alemania", "Italia"],
+    "respuesta": "Portugal"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Valencia CF?",
+    "opciones": ["Mundo", "Kempes", "Villa", "Fernando"],
+    "respuesta": "Mundo"
+  },
+  {
+    "pregunta": "¿En qué año se fundó el FC Barcelona?",
+    "opciones": ["1899", "1902", "1910", "1923"],
+    "respuesta": "1899"
+  },
+  {
+    "pregunta": "¿Qué país fue anfitrión del Mundial 2002 junto con Corea del Sur?",
+    "opciones": ["Japón", "China", "Vietnam", "Tailandia"],
+    "respuesta": "Japón"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico de la selección española?",
+    "opciones": ["David Villa", "Fernando Torres", "Raúl", "Morata"],
+    "respuesta": "David Villa"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1999?",
+    "opciones": ["Manchester United", "Bayern Múnich", "Juventus", "Real Madrid"],
+    "respuesta": "Manchester United"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 2002?",
+    "opciones": ["Ronaldo", "Klose", "Ronaldinho", "Rivaldo"],
+    "respuesta": "Ronaldo"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Copa América 2019?",
+    "opciones": ["Brasil", "Argentina", "Chile", "Uruguay"],
+    "respuesta": "Brasil"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Sevilla FC?",
+    "opciones": ["Guerrero", "Kanouté", "Luis Fabiano", "Bacca"],
+    "respuesta": "Guerrero"
+  },
+  {
+    "pregunta": "¿En qué año ganó Francia su primer Mundial?",
+    "opciones": ["1998", "2006", "1982", "2018"],
+    "respuesta": "1998"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 2004?",
+    "opciones": ["Oporto", "Mónaco", "Chelsea", "Juventus"],
+    "respuesta": "Oporto"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Athletic Club?",
+    "opciones": ["Telmo Zarra", "Aduriz", "Urzaiz", "Etxeberria"],
+    "respuesta": "Telmo Zarra"
+  },
+  {
+    "pregunta": "¿Qué selección ganó el Mundial 1982?",
+    "opciones": ["Italia", "Alemania", "Brasil", "Argentina"],
+    "respuesta": "Italia"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 2014?",
+    "opciones": ["James Rodríguez", "Messi", "Müller", "Neymar"],
+    "respuesta": "James Rodríguez"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1997?",
+    "opciones": ["Borussia Dortmund", "Juventus", "Real Madrid", "Milan"],
+    "respuesta": "Borussia Dortmund"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Betis?",
+    "opciones": ["Rubén Castro", "Joaquín", "Rafael Gordillo", "Alfonso"],
+    "respuesta": "Rubén Castro"
+  },
+  {
+    "pregunta": "¿En qué año ganó Italia su último Mundial?",
+    "opciones": ["2006", "1982", "1990", "1970"],
+    "respuesta": "2006"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 2008?",
+    "opciones": ["España", "Alemania", "Italia", "Rusia"],
+    "respuesta": "España"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Villarreal CF?",
+    "opciones": ["Giuseppe Rossi", "Forlán", "Soriano", "Cani"],
+    "respuesta": "Giuseppe Rossi"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 2003?",
+    "opciones": ["Milan", "Juventus", "Real Madrid", "Manchester United"],
+    "respuesta": "Milan"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 2006?",
+    "opciones": ["Miroslav Klose", "Luca Toni", "Thierry Henry", "David Villa"],
+    "respuesta": "Miroslav Klose"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Copa América 2015?",
+    "opciones": ["Chile", "Argentina", "Brasil", "Uruguay"],
+    "respuesta": "Chile"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Deportivo de La Coruña?",
+    "opciones": ["Bebeto", "Tristán", "Mauro Silva", "Fran"],
+    "respuesta": "Bebeto"
+  },
+  {
+    "pregunta": "¿En qué año ganó Alemania su último Mundial?",
+    "opciones": ["2014", "1990", "2006", "1982"],
+    "respuesta": "2014"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1996?",
+    "opciones": ["Juventus", "Ajax", "Real Madrid", "Milan"],
+    "respuesta": "Juventus"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Espanyol?",
+    "opciones": ["Raúl Tamudo", "Luis García", "Sergio García", "Pandiani"],
+    "respuesta": "Raúl Tamudo"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1992?",
+    "opciones": ["Dinamarca", "Alemania", "Suecia", "Francia"],
+    "respuesta": "Dinamarca"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1998?",
+    "opciones": ["Davor Suker", "Ronaldo", "Zidane", "Henry"],
+    "respuesta": "Davor Suker"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 2001?",
+    "opciones": ["Bayern Múnich", "Valencia", "Real Madrid", "Juventus"],
+    "respuesta": "Bayern Múnich"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Celta de Vigo?",
+    "opciones": ["Iago Aspas", "Mostovoi", "Gudelj", "Catanha"],
+    "respuesta": "Iago Aspas"
+  },
+  {
+    "pregunta": "¿En qué año ganó Brasil su último Mundial?",
+    "opciones": ["2002", "1994", "1970", "1982"],
+    "respuesta": "2002"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1988?",
+    "opciones": ["Países Bajos", "Alemania", "Italia", "URSS"],
+    "respuesta": "Países Bajos"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Málaga CF?",
+    "opciones": ["Duda", "Salva Ballesta", "Basti", "Dely Valdés"],
+    "respuesta": "Duda"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1995?",
+    "opciones": ["Ajax", "Milan", "Juventus", "Real Madrid"],
+    "respuesta": "Ajax"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 2010?",
+    "opciones": ["Thomas Müller", "David Villa", "Forlán", "Sneijder"],
+    "respuesta": "Thomas Müller"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Copa América 2016?",
+    "opciones": ["Chile", "Argentina", "Brasil", "Uruguay"],
+    "respuesta": "Chile"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Getafe CF?",
+    "opciones": ["Ángel", "Soldado", "Jorge Molina", "Manu del Moral"],
+    "respuesta": "Ángel"
+  },
+  {
+    "pregunta": "¿En qué año ganó Uruguay su último Mundial?",
+    "opciones": ["1950", "1930", "1970", "1962"],
+    "respuesta": "1950"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 2000?",
+    "opciones": ["Real Madrid", "Valencia", "Bayern Múnich", "Manchester United"],
+    "respuesta": "Real Madrid"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Osasuna?",
+    "opciones": ["Urban", "Sola", "Roberto Torres", "Portillo"],
+    "respuesta": "Urban"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1984?",
+    "opciones": ["Francia", "España", "Alemania", "Italia"],
+    "respuesta": "Francia"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1986?",
+    "opciones": ["Gary Lineker", "Maradona", "Careca", "Butragueño"],
+    "respuesta": "Gary Lineker"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1994?",
+    "opciones": ["Milan", "Barcelona", "Ajax", "Juventus"],
+    "respuesta": "Milan"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Levante UD?",
+    "opciones": ["Roger Martí", "Barkero", "Juanlu", "Morales"],
+    "respuesta": "Roger Martí"
+  },
+  {
+    "pregunta": "¿En qué año ganó Inglaterra su único Mundial?",
+    "opciones": ["1966", "1970", "1958", "1982"],
+    "respuesta": "1966"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1976?",
+    "opciones": ["Checoslovaquia", "Alemania", "Países Bajos", "Italia"],
+    "respuesta": "Checoslovaquia"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1970?",
+    "opciones": ["Gerd Müller", "Pelé", "Jairzinho", "Rivelino"],
+    "respuesta": "Gerd Müller"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1993?",
+    "opciones": ["Marsella", "Milan", "Barcelona", "Manchester United"],
+    "respuesta": "Marsella"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Granada CF?",
+    "opciones": ["Portu", "Roberto Soldado", "Antonio Puertas", "Diego Mainz"],
+    "respuesta": "Portu"
+  },
+  {
+    "pregunta": "¿En qué año ganó Argentina su primer Mundial?",
+    "opciones": ["1978", "1986", "1990", "1930"],
+    "respuesta": "1978"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1964?",
+    "opciones": ["España", "URSS", "Italia", "Hungría"],
+    "respuesta": "España"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1966?",
+    "opciones": ["Eusébio", "Bobby Charlton", "Pelé", "Gerd Müller"],
+    "respuesta": "Eusébio"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1992?",
+    "opciones": ["Barcelona", "Sampdoria", "Milan", "Juventus"],
+    "respuesta": "Barcelona"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Alavés?",
+    "opciones": ["Javi Moreno", "Ibai Gómez", "Manu García", "Guidetti"],
+    "respuesta": "Javi Moreno"
+  },
+  {
+    "pregunta": "¿En qué año ganó México su primer Mundial Sub-17?",
+    "opciones": ["2005", "2011", "2013", "1999"],
+    "respuesta": "2005"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1968?",
+    "opciones": ["Italia", "Yugoslavia", "URSS", "Inglaterra"],
+    "respuesta": "Italia"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1958?",
+    "opciones": ["Pelé", "Just Fontaine", "Vavá", "Didi"],
+    "respuesta": "Just Fontaine"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1989?",
+    "opciones": ["Milan", "Steaua Bucarest", "Benfica", "PSV"],
+    "respuesta": "Milan"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Sporting de Gijón?",
+    "opciones": ["Quini", "David Villa", "Jony", "Luis Enrique"],
+    "respuesta": "Quini"
+  },
+  {
+    "pregunta": "¿En qué año ganó España su primera Eurocopa?",
+    "opciones": ["1964", "2008", "2012", "1984"],
+    "respuesta": "1964"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1972?",
+    "opciones": ["Alemania", "Bélgica", "URSS", "Italia"],
+    "respuesta": "Alemania"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1982?",
+    "opciones": ["Paolo Rossi", "Zico", "Kempes", "Boniek"],
+    "respuesta": "Paolo Rossi"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1986?",
+    "opciones": ["Steaua Bucarest", "Barcelona", "Milan", "Oporto"],
+    "respuesta": "Steaua Bucarest"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Mallorca?",
+    "opciones": ["Samuel Eto'o", "Dani Güiza", "Aduriz", "Víctor"],
+    "respuesta": "Samuel Eto'o"
+  },
+  {
+    "pregunta": "¿En qué año ganó Francia su segunda Eurocopa?",
+    "opciones": ["2000", "1984", "1992", "2016"],
+    "respuesta": "2000"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1980?",
+    "opciones": ["Alemania", "Bélgica", "Italia", "Checoslovaquia"],
+    "respuesta": "Alemania"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1994?",
+    "opciones": ["Hristo Stoichkov", "Romário", "Baggio", "Bebeto"],
+    "respuesta": "Hristo Stoichkov"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1984?",
+    "opciones": ["Liverpool", "Roma", "Juventus", "Hamburgo"],
+    "respuesta": "Liverpool"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Zaragoza?",
+    "opciones": ["Marcelino", "Ewerthon", "Pichi Alonso", "Gus Poyet"],
+    "respuesta": "Marcelino"
+  },
+  {
+    "pregunta": "¿En qué año ganó Portugal la Eurocopa?",
+    "opciones": ["2016", "2004", "2000", "1996"],
+    "respuesta": "2016"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1976?",
+    "opciones": ["Checoslovaquia", "Alemania", "Países Bajos", "Italia"],
+    "respuesta": "Checoslovaquia"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1962?",
+    "opciones": ["Garrincha", "Vavá", "Pelé", "Amarildo"],
+    "respuesta": "Garrincha"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1982?",
+    "opciones": ["Aston Villa", "Bayern Múnich", "Juventus", "Real Madrid"],
+    "respuesta": "Aston Villa"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Valladolid?",
+    "opciones": ["Víctor", "Alberto López", "Eusebio", "Óscar González"],
+    "respuesta": "Víctor"
+  },
+  {
+    "pregunta": "¿En qué año ganó Grecia la Eurocopa?",
+    "opciones": ["2004", "2008", "2012", "1996"],
+    "respuesta": "2004"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1960?",
+    "opciones": ["URSS", "Yugoslavia", "Francia", "Checoslovaquia"],
+    "respuesta": "URSS"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1954?",
+    "opciones": ["Sándor Kocsis", "Ferenc Puskás", "Helmut Rahn", "Fritz Walter"],
+    "respuesta": "Sándor Kocsis"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1980?",
+    "opciones": ["Nottingham Forest", "Hamburgo", "Liverpool", "Real Madrid"],
+    "respuesta": "Nottingham Forest"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Rayo Vallecano?",
+    "opciones": ["Piti", "Míchel", "Bolo", "Raúl de Tomás"],
+    "respuesta": "Piti"
+  },
+  {
+    "pregunta": "¿En qué año ganó Alemania su primera Eurocopa?",
+    "opciones": ["1972", "1980", "1996", "1968"],
+    "respuesta": "1972"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 1996?",
+    "opciones": ["Alemania", "República Checa", "Inglaterra", "Francia"],
+    "respuesta": "Alemania"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1930?",
+    "opciones": ["Guillermo Stábile", "Héctor Scarone", "José Nasazzi", "Pedro Cea"],
+    "respuesta": "Guillermo Stábile"
+  },
+  {
+    "pregunta": "¿Qué club ganó la Champions League en 1979?",
+    "opciones": ["Nottingham Forest", "Malmö", "Liverpool", "Real Madrid"],
+    "respuesta": "Nottingham Forest"
+  },
+  {
+    "pregunta": "¿Quién es el máximo goleador histórico del Sporting de Gijón?",
+    "opciones": ["Quini", "David Villa", "Jony", "Luis Enrique"],
+    "respuesta": "Quini"
+  },
+  {
+    "pregunta": "¿En qué año ganó España su última Eurocopa?",
+    "opciones": ["2012", "2008", "1964", "1984"],
+    "respuesta": "2012"
+  },
+  {
+    "pregunta": "¿Qué selección ganó la Eurocopa 2000?",
+    "opciones": ["Francia", "Italia", "Países Bajos", "Portugal"],
+    "respuesta": "Francia"
+  },
+  {
+    "pregunta": "¿Quién fue el máximo goleador del Mundial 1978?",
+    "opciones": ["Mario Kempes", "Rob Rensenbrink", "Paolo Rossi", "Zico"],
+    "respuesta": "Mario Kempes"
+  }
+]
