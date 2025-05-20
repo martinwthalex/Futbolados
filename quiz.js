@@ -24,17 +24,17 @@ const canvasHeight = timeCanvas.height;
 const bgCanvas = document.getElementById("background-canvas");
 const bgCtx = bgCanvas.getContext("2d");
 let bgStadiumImg = new Image();
-bgStadiumImg.src = "/src/img/backgrounds/stadium0.jpg";
+bgStadiumImg.src = "./src/img/backgrounds/stadium0.jpg";
 
 
 let confettiParticles = [];
 let confettiActive = false;
 const confettiStarImg = new Image();
-confettiStarImg.src = "/src/sprites/star.png";
+confettiStarImg.src = "./src/sprites/star.png";
 
 
 const ballSprite = new Image();
-ballSprite.src = "/src/sprites/ball.png";
+ballSprite.src = "./src/sprites/ball.png";
 const BALL_FRAMES = 10;
 const BALL_FRAME_WIDTH = 512;
 const BALL_FRAME_HEIGHT = 512;
