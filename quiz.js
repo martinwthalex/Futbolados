@@ -175,7 +175,7 @@ function shuffle(array) {
 }
 
 async function loadQuestions() {
-  const res = await fetch("/data/preguntas.json");
+  const res = await fetch("./data/preguntas.json");
   questions = await res.json();
 }
 

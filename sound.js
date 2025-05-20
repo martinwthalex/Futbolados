@@ -1,8 +1,8 @@
 const sounds = {
-    click: new Audio("/src/audio/clickSound.mp3"),
-    goal: new Audio("/src/audio/goal.mp3"),
-    menu: new Audio("/src/audio/menuMusic.mp3"),
-    fail: new Audio("/src/audio/queMiraBobo.mp3")
+    click: new Audio("./src/audio/clickSound.mp3"),
+    goal: new Audio("./src/audio/goal.mp3"),
+    menu: new Audio("./src/audio/menuMusic.mp3"),
+    fail: new Audio("./src/audio/queMiraBobo.mp3")
 };
 
 let isMuted = false;
