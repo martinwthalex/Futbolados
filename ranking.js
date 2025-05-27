@@ -1,8 +1,9 @@
 // FUNCIONES DE FIREBASE PARA GUARDAR Y MOSTRAR RANKING
 
 // Inicialización de Firestore (Firebase modular)
-import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";
+import { getFirestore, collection, getDocs, query, orderBy, limit, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";
 import { getApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-auth.js";
 const db = getFirestore(getApp());
 
 const TOP_N = 10;
@@ -12,30 +13,24 @@ const backButtonRanking = document.getElementById("back-btn-ranking");
 backButtonRanking.addEventListener("click", () => {window.mostrarSeccion(document.getElementById("menu-container"));});
 
 async function guardarPuntuacion(nombre, avatar, puntos) {
-  // Guarda solo la mejor puntuación por usuario
-  const puntuacionesRef = collection(db, "puntuaciones");
-  const q = query(puntuacionesRef, orderBy("puntos", "desc"));
-  const snapshot = await getDocs(q);
-  let found = null;
-  snapshot.forEach(doc => {
-    const data = doc.data();
-    if (data.nombre === nombre) found = { id: doc.id, ...data };
-  });
-  if (!found || puntos > found.puntos) {
-    // Si no existe o la nueva puntuación es mejor, guarda/actualiza
-    if (found) {
-      // Actualiza
-      await import("https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js").then(({ doc, setDoc }) =>
-        setDoc(doc(db, "puntuaciones", found.id), {
-          nombre, avatar, puntos
-        })
-      );
-    } else {
-      // Añade
-      await import("https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js").then(({ addDoc }) =>
-        addDoc(puntuacionesRef, { nombre, avatar, puntos })
-      );
+  const db = getFirestore(getApp());
+  const auth = getAuth();
+  const user = auth.currentUser;
+  if (!user) return;
+  const uid = user.uid;
+  const puntuacionRef = doc(db, "puntuaciones", uid);
+  const docSnap = await getDoc(puntuacionRef);
+  let guardar = false;
+  if (!docSnap.exists()) {
+    guardar = true;
+  } else {
+    const data = docSnap.data();
+    if (puntos > (data.puntos || 0)) {
+      guardar = true;
     }
+  }
+  if (guardar) {
+    await setDoc(puntuacionRef, { nombre, avatar, puntos });
   }
 }
 
