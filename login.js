@@ -71,7 +71,11 @@ document.getElementById('register-form').addEventListener('submit', async (e) =>
     const email = document.getElementById('register-email').value.trim();
     const password = document.getElementById('register-password').value;
     const name = document.getElementById('register-name').value.trim();
-    const avatar = selectedRegisterAvatar;
+    // Elimina './' si existe al principio de la ruta del avatar
+    let avatar = selectedRegisterAvatar;
+    if (avatar && avatar.startsWith('./')) {
+        avatar = avatar.substring(2);
+    }
     const errorElem = document.getElementById('register-error');
     errorElem.textContent = "";
 
