@@ -7,8 +7,7 @@
 body {
     font-family: 'Orbitron', sans-serif;
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-    url('https://images.unsplash.com/photo-1608200184287-5b93809ccfa1?auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     background-size: cover;
     background-position: center;    
     color: white;
@@ -39,6 +38,24 @@ h1 {
 
 #login-container.active, #register-container.active {
     display: block;
+}
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    max-width: 400px;
+    width: 92vw;
+    margin: 40px auto;
+    padding: 32px 24px;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+    overflow: visible;
 }
 
 #login-container, #register-container {
@@ -175,8 +192,8 @@ h1 {
 }
 
 #register-avatar-options .avatar-option {
-    width: 48px;
-    height: 48px;
+    width: min(48px, 16vw);
+    height: min(48px, 16vw);
     border-radius: 50%;
     cursor: pointer;
     border: 2px solid transparent;
@@ -201,7 +218,7 @@ h1 {
 /* Botón crear cuenta centrado */
 #register-continue-btn {
     background: linear-gradient(45deg, #1de9b6, #1dc4e9);
-    padding: 14px 32px;
+    padding: 14px 40px;
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -209,7 +226,7 @@ h1 {
     border-radius: 8px;
     border: none;
     color: #fff;
-    margin: 0.5rem auto 0 auto;
+    margin: 0 auto;
     transition: all 0.2s;
     box-shadow: 0 2px 8px rgba(29,233,182,0.13);
     display: block;
@@ -851,5 +868,81 @@ h1 {
     background: linear-gradient(45deg, #1dc4e9, #1de9b6);
     box-shadow: 0 12px 24px rgba(29,233,182,0.18);
     filter: brightness(1.08);
+}
+
+/* --- Responsive para login y registro en móvil --- */
+@media (max-width: 600px) {
+  #login-container {
+    padding: 22px 5vw;
+    max-width: 85vw;
+    width: 98vw;
+    margin: 2vh auto 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    top: -6vh;
+    /* sube la caja un poco para evitar que el teclado tape el contenido */
+    transition: top 0.2s;
+  }
+  #login-form input {
+    font-size: 1.13rem;
+    padding: 14px 14px;
+  }
+  #login-continue-btn {
+    font-size: 1.13rem;
+  }
+  #login-container h2 {
+    font-size: 2.30rem;
+  }
+
+  #register-container {
+    padding: 22px 5vw;
+    max-width: 85vw;
+    width: 98vw;
+    margin: 0 auto 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    /* top: -6vh;
+    sube la caja un poco para evitar que el teclado tape el contenido *
+    transition: top 0.2s; */
+  }
+  #register-form input {
+    font-size: 1.13rem;
+    padding: 14px 14px;
+  }
+  #register-continue-btn {
+    font-size: 1.13rem;
+  }
+  #register-container h2 {
+    font-size: 2.60rem;
+  }
+  #register-avatar-options {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  #register-avatar-options .avatar-option {
+    width: min(60px, 16vw);
+    height: min(60px, 16vw);
+  }
+  
+}
+
+@media (orientation: landscape) and (max-width: 990px) {
+  #login-container, #register-container {
+    max-height: 92vh;
+    height: auto;
+    overflow-y: auto;
+    margin: 2vh auto 2vh auto;
+    /* Centrado vertical y margen para evitar corte */
+  }
+  html, body {
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+}
+
+html, body {
+  overflow: hidden !important;
+  height: 100vh;
 }
 

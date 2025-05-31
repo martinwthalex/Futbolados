@@ -24,7 +24,35 @@ const canvasHeight = timeCanvas.height;
 const bgCanvas = document.getElementById("background-canvas");
 const bgCtx = bgCanvas.getContext("2d");
 let bgStadiumImg = new Image();
-bgStadiumImg.src = "./src/img/backgrounds/stadium0.jpg";
+
+function setBgStadiumImgByOrientation() {
+  const isMobile = window.innerWidth <= 600;
+  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+  const newSrc = (isMobile && isPortrait)
+    ? "./src/img/backgrounds/stadium0_movil.jpg"
+    : "./src/img/backgrounds/stadium0.jpg";
+  if (bgStadiumImg.src !== window.location.origin + newSrc.replace('./', '/')) {
+    bgStadiumImg.src = newSrc;
+  }
+}
+
+window.addEventListener("resize", () => {
+  setBgStadiumImgByOrientation();
+  resizeBackgroundCanvas();
+});
+window.addEventListener("orientationchange", () => {
+  setTimeout(() => {
+    setBgStadiumImgByOrientation();
+    resizeBackgroundCanvas();
+  }, 100); // Espera a que el navegador actualice dimensiones
+});
+// Espera a que el layout esté listo antes de decidir la imagen de fondo
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    setBgStadiumImgByOrientation();
+    resizeBackgroundCanvas();
+  },10); // Pequeño retardo para asegurar viewport correcto en móviles
+});
 
 
 let confettiParticles = [];
